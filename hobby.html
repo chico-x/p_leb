@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>form controls example</title>
+</head>
+<body>
+    <h2>form controls Demonstration</h2>
+    <form>
+        <table border="1" cellpadding="5">
+            <tr>
+                <td>Choose a programming language</td>
+                <td>
+                    <input list="language" name="language">
+                    <datalist id="language">
+                        <option value="C">
+                        <option value="C++">
+                        <option value="Java">
+                        <option value="Python">
+                        <option value="Javascript">
+                    </datalist>
+                </td>
+            </tr>
+            <tr>
+                <td>Select your hobbies</td>
+                <td>
+                    <select name="hobbies" multiple size="4">
+                        <option>Reading</option>
+                        <option>Music</option>
+                        <option>Sports</option>
+                        <option>Travelling</option>
+                        <option>Photography</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td>Select Course</td>
+                <td>
+                    <select name="course">
+                        <optgroup label="Computer Science">
+                            <option>BCA</option>
+                            <option>B.Sc C.S</option>
+                            <option>MCA</option>
+                        </optgroup>
+                        <optgroup label="Commerce">
+                            <option>B.Com</option>
+                            <option>M.Com</option>
+                        </optgroup>
+                        <optgroup label="Management">
+                            <option>BBA</option>
+                            <option>MBA</option>
+                        </optgroup>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" align="center">
+                    <input type="Submit" value="Submit">
+                    <input type="Reset" value="Reset">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
