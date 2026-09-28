@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        var bytes = parseInt(prompt("Enter no. of bytes:"));
+        if (bytes < 1024) {
+            console.log(bytes + " Bytes");
+        } else if (bytes < 1024 * 1024) {
+            console.log((bytes / 1024) + " KB");
+        } else if (bytes < 1024 * 1024 * 1024) {
+            console.log((bytes / (1024 * 1024)) + " MB");
+        } else {
+            console.log((bytes / (1024 * 1024 * 1024)) + " GB");
+        }
+    </script>
+</body>
+</html>
