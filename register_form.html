@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form Validation</title>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        Name: <input type="text" id="name"><br><br>
+        Email: <input type="email" id="email"><br><br>
+        Ph no: <input type="tel" id="phone"><br><br>
+        <input type="Submit" value="Submit">
+    </form>
+
+    <script>
+        function validateForm() {
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var phone = document.getElementById("phone").value;
+
+            if (name == "") {
+                document.getElementById("error-message").innerHTML = "Username must be filled out";
+                return false;
+            }
+
+            if (email == "") {
+                document.getElementById("error-message").innerHTML = "Email must be filled out";
+                return false;
+            }
+
+            document.getElementById("error-message").innerHTML = "";
+            return true;
+        }
+    </script>
+</body>
+</html>
