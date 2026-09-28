@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form validation entities</title>
+</head>
+<body>
+    <form onsubmit="return validateForm()">
+        Username: <input type="text" id="username" name="username"><br>
+        Password: <input type="password" id="password" name="password"><br>
+        <input type="Submit" value="Submit">
+    </form>
+
+    <p id="error" style="color:red;"></p>
+
+    <script>
+        function validateForm() {
+            var username = document.getElementById("username").value;
+            var password = document.getElementById("password").value;
+
+            if (username == "") {
+                document.getElementById("error").innerHTML = "Username is required";
+                return false;
+            }
+
+            if (password == "") {
+                document.getElementById("error").innerHTML = "Password is required";
+                return false;
+            }
+
+            document.getElementById("error").innerHTML = "";
+            return true;
+        }
+    </script>
+</body>
+</html>
