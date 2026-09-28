@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Object Comparison Example</title>
+</head>
+<body>
+    <h2>Check Console for output</h2>
+    <script>
+        function checkValues(obj1, obj2) {
+            return Object.keys(obj2).every(key => obj1.hasOwnProperty(key) && obj1[key] === obj2[key]);
+        }
+
+        const obj1 = { name: 'John', age: 25, city: 'New York' };
+        const obj2 = { name: 'John', age: 25 };
+        const obj3 = { name: 'John', age: 30 };
+
+        console.log(checkValues(obj1, obj2));
+        console.log(checkValues(obj1, obj3));
+    </script>
+</body>
+</html>
